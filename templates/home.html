@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Socializing App</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <h2>Socializing App</h2>
+    <div class="container2" >
+        <div id="pick_genre">
+            Genre<br>
+            <button class='choice_btn' type="button">video games</button>
+            <button class='choice_btn' type="button">sport</button>
+            <button class='choice_btn' type="button">work</button>
+        </div>
+        <br>
+        <div id="pick_relationship">
+            Relationship<br>
+            <button class='choice_btn'  type="button">friend</button>
+            <button class='choice_btn'  type="button">colleague</button>
+            <button class='choice_btn'  type="button">stranger</button>
+        </div>
+        <br>
+        <div id="pick_age">
+            Age<br>
+            <button class='choice_btn'  type="button">15</button>
+            <button class='choice_btn'  type="button">40</button>
+            <button class='choice_btn'  type="button">65</button>
+        </div>
+        <br>
+        <button class="submit" id="preference_btn" type="button">Create Scenario</button>
+    </div>
+    &nbsp
+    <div class="container2" id="pick_scenario">
+        <div id="display_scenarios"></div>
+    </div>
+    &nbsp
+    <div class="container2">
+        <div class="messages"></div>
+
+        <!-- Input form and submission -->
+        <form class="message-form">
+            <input type="text" class="typedMessage" placeholder="Type Your Message..." autofocus>
+            <button class="submit" id="msg_btn">Send</button>
+        </form>
+
+    </div>
+    &nbsp
+    <div class="container2" id="show_feeback">
+        <div id="pick_feedback">
+            Genre<br>
+            <button class='choice_btn' type="button">clarity</button>
+            <button class='choice_btn' type="button">simplicity</button>
+            <button class='choice_btn' type="button">content</button>
+        </div>
+        <br>
+        <button class="submit" id="feedback_btn" type="submit">Get Feedback</button>
+    </div>
+
+    <script src="{{url_for('static', filename='app.js')}}"> </script>
+</body>
+
+</html>
